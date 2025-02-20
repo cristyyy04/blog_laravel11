@@ -25,6 +25,10 @@ require __DIR__.'/auth.php';
 route::view('/','welcome1')->name('home');
 route::view('contacto','contacto')->name('contact');
 route::get('blog',[PostController::class,'index'])->name('posts.index');
+route::get('/blog/create',[PostController::class,'create'])->name('posts.create');
+route::post('/blog',[PostController::class,'store'])->name('posts.store');
 route::get('/blog/{post}',[PostController::class,'show'])->name('posts.show');
+route::get('/blog/{post}/edit',[PostController::class,'edit'])->name('posts.edit');
+route::patch('/blog/{post}',[PostController::class,'update'])->name('posts.update');
 route::view('nosotros','about')->name('about');
 

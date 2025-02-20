@@ -9,6 +9,10 @@
 </head>
 <body>
  <x-partials.nav/>
+ @session('status')
+     <div>{{$value}}</div>
+ @endsession
+
 {{ $slot }}
 @if (isset($sidebar))
     <div id="sidebar">
