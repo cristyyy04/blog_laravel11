@@ -44,5 +44,8 @@ class PostController extends Controller
      // session()->flash('status','Post Updated!');
       return to_route('posts.index')->with('status','Post Updated!');
     }
-    
+    public function destroy(Post $post){
+        $post->delete();
+        return to_route('posts.index')->with('status','Post Deleted!');
+    }
 }
