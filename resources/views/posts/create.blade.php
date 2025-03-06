@@ -1,4 +1,4 @@
-<x-layout meta-title="Create new post">
+<x-layout meta-title="Create new post" meta-description="blogg">
    
    <form method="POST" action="{{ route('posts.store') }}">
     @csrf
